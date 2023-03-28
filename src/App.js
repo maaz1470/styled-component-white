@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+// import './components/assets/css/light.css';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from './components/style/Global.style';
+import Tutorial from './components/Tutorial';
+export default function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={{theme: "light"}}>
+        <Tutorial />
+      </ThemeProvider>
+      
+    </>
+  )
 }
-
-export default App;
